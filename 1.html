@@ -1,0 +1,79 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  </head>
+  <div class="slider">
+    <div><img src="kross.jpg"></div>
+    <div><img src="watch.jpg"></div>
+    <div><img src="kross.jpg"></div>
+  </div>
+  
+  <script>
+    $(document).ready(function(){
+      $('.slider').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true,
+        arrows: false
+      });
+    });
+  </script>
+  <style>
+    /* Стили для контейнера слайдера */
+.slider {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* Стили для слайдов */
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+/* Стили для точек навигации */
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #fff;
+}
+@media screen and (max-width: 450px) {
+  .slider {
+  width:80%;
+  height: 400px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin: 0 auto;
+}
+}
+  </style>
